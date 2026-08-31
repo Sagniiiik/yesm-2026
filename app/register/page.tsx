@@ -17,7 +17,7 @@ export default function Register() {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbw4g0KnXBoEIgN-xV9w6rjAgOLNt-K6Vdr6k3UuPUGaGoSeNn801oeFfDw-Gjceqb7Z/exec",
+        "https://docs.google.com/forms/d/e/1FAIpQLSfst03o2f47K_-5Dvh69l6E3vjtZjEg4HsBdFosRk3OI22nsg/formResponse",
         {
           method: "POST",
           body: formData,
@@ -53,7 +53,7 @@ export default function Register() {
               <label className="block text-sm font-medium text-gray-400 mb-1">Full Name</label>
               <input 
                 type="text" 
-                name="Full Name"
+                name="entry.281254158"
                 required
                 className="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-white transition-colors"
                 placeholder="John Doe"
@@ -64,7 +64,7 @@ export default function Register() {
               <label className="block text-sm font-medium text-gray-400 mb-1">Email Address</label>
               <input 
                 type="email" 
-                name="Email"
+                name="entry.954768459"
                 required
                 className="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-white transition-colors"
                 placeholder="student@college.edu"
@@ -75,7 +75,7 @@ export default function Register() {
               <label className="block text-sm font-medium text-gray-400 mb-1">College</label>
               <input 
                 type="text" 
-                name="College"
+                name="entry.463104863"
                 required
                 className="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-white transition-colors"
                 placeholder="Your Institute Name"
@@ -85,7 +85,7 @@ export default function Register() {
             <div>
               <label className="block text-sm font-medium text-gray-400 mb-1">Select Event</label>
               <select 
-                name="Event"
+                name="entry.1266878257"
                 className="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-white transition-colors appearance-none"
               >
                 <option value="Kautilya">Kautilya</option>
@@ -110,4 +110,3 @@ export default function Register() {
     </div>
   );
 }
-
