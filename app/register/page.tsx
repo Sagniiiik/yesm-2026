@@ -5,41 +5,7 @@ import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
 export default function Register() {
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    const data = new URLSearchParams();
-    for (const pair of formData.entries()) {
-      data.append(pair[0], pair[1].toString());
-    }
-
-    try {
-      await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSfst03o2f47K_-5Dvh69l6E3vjtZjEg4HsBdFosRk3OI22nsg/formResponse",
-        {
-          method: "POST",
-          body: data.toString(), 
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      );
-      setSuccess(true);
-      form.reset();
-    } catch (error) {
-      console.error("Error submitting form", error);
-    } finally {
-      setLoading(false);
-    }
-  }
+  const [submitted, setSubmitted] = useState(false);
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
@@ -50,13 +16,25 @@ export default function Register() {
           <h1 className="text-3xl font-bold mb-2">Register for YESM</h1>
           <p className="text-gray-400 mb-8 text-sm">Secure your spot in the events.</p>
           
-          {success ? (
+          {submitted ? (
             <div className="bg-green-900 border border-green-500 text-green-200 p-4 rounded-lg mb-6 text-center font-bold">
               Successfully registered! Check your email for confirmation.
             </div>
           ) : null}
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+          {/* Hidden iframe to intercept the Google Forms redirect */}
+          <iframe name="hiddenConfirm" id="hiddenConfirm" style={{ display: "none" }}></iframe>
+
+          <form 
+            action="https://docs.google.com/forms/d/e/1FAIpQLSfst03o2f47K_-5Dvh69l6E3vjtZjEg4HsBdFosRk3OI22nsg/formResponse" 
+            method="POST" 
+            target="hiddenConfirm"
+            onSubmit={() => {
+              // Show success message immediately on click
+              setSubmitted(true);
+            }}
+            className={submitted ? "hidden" : "flex flex-col gap-5"}
+          >
             <div>
               <label className="block text-sm font-medium text-gray-400 mb-1">Full Name</label>
               <input 
@@ -105,10 +83,9 @@ export default function Register() {
             
             <button 
               type="submit" 
-              disabled={loading}
-              className="w-full bg-white text-black font-bold py-3 rounded-lg mt-4 hover:bg-gray-200 transition-colors disabled:opacity-50"
+              className="w-full bg-white text-black font-bold py-3 rounded-lg mt-4 hover:bg-gray-200 transition-colors"
             >
-              {loading ? "Submitting..." : "Submit Registration"}
+              Submit Registration
             </button>
           </form>
         </div>
