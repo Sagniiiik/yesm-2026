@@ -25,7 +25,7 @@ export default function Register() {
         "https://docs.google.com/forms/d/e/1FAIpQLSfst03o2f47K_-5Dvh69l6E3vjtZjEg4HsBdFosRk3OI22nsg/formResponse",
         {
           method: "POST",
-          body: data,
+          body: data.toString(), 
           mode: "no-cors",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
