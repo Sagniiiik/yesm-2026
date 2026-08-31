@@ -15,13 +15,21 @@ export default function Register() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    const data = new URLSearchParams();
+    for (const pair of formData.entries()) {
+      data.append(pair[0], pair[1].toString());
+    }
+
     try {
       await fetch(
         "https://docs.google.com/forms/d/e/1FAIpQLSfst03o2f47K_-5Dvh69l6E3vjtZjEg4HsBdFosRk3OI22nsg/formResponse",
         {
           method: "POST",
-          body: formData,
+          body: data,
           mode: "no-cors",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
         }
       );
       setSuccess(true);
