@@ -4,7 +4,6 @@ import { useState } from "react";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
-
 export default function Register() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -22,7 +21,7 @@ export default function Register() {
         {
           method: "POST",
           body: formData,
-          mode: "no-cors", // This is important for Google Apps Script
+          mode: "no-cors",
         }
       );
       setSuccess(true);
@@ -38,19 +37,18 @@ export default function Register() {
     <div className="min-h-screen bg-black text-white flex flex-col">
       <Navbar />
       
-      <main className="flex-1 flex items-center justify-center p-6 mt-12">
+      <main className="flex-1 flex items-center justify-center p-6 mt-12 mb-12">
         <div className="w-full max-w-md bg-gray-900 border border-gray-800 rounded-2xl p-8">
           <h1 className="text-3xl font-bold mb-2">Register for YESM</h1>
           <p className="text-gray-400 mb-8 text-sm">Secure your spot in the events.</p>
           
           {success ? (
             <div className="bg-green-900 border border-green-500 text-green-200 p-4 rounded-lg mb-6 text-center font-bold">
-              Successfully registered! We will see you there.
+              Successfully registered! Check your email for confirmation.
             </div>
           ) : null}
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-            {/* Note: The name attributes below MUST exactly match your Google Sheet headers */}
             <div>
               <label className="block text-sm font-medium text-gray-400 mb-1">Full Name</label>
               <input 
@@ -59,6 +57,17 @@ export default function Register() {
                 required
                 className="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-white transition-colors"
                 placeholder="John Doe"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-400 mb-1">Email Address</label>
+              <input 
+                type="email" 
+                name="Email"
+                required
+                className="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-white transition-colors"
+                placeholder="student@college.edu"
               />
             </div>
             
@@ -101,3 +110,4 @@ export default function Register() {
     </div>
   );
 }
+
