@@ -17,7 +17,7 @@ export default function Register() {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbxn3Ilfz9i8jZRSWW3N-NySvumAiOHi47frtNZ4kNNe_72MUYdNat1WMGcdvqrgwDPh9g/exec",
+        "https://script.google.com/macros/s/AKfycbw4g0KnXBoEIgN-xV9w6rjAgOLNt-K6Vdr6k3UuPUGaGoSeNn801oeFfDw-Gjceqb7Z/exec",
         {
           method: "POST",
           body: formData,
