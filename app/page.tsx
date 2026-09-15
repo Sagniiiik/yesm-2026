@@ -64,50 +64,38 @@ export default function Home() {
         <section id="events" className="bg-white border-y border-[#E5DFD3] py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-[#1A1818] mb-12 text-center">Featured Competitions</h2>
-            
-            {/* Added items-start here to prevent cards from stretching vertically */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               
               {eventsList.map((event) => (
                 <div 
                   key={event.name} 
-                  className={`bg-[#F8F5F2] border ${expandedEvent === event.name ? 'border-[#732021] shadow-md' : 'border-[#D9D2C5]'} rounded-md p-6 hover:border-[#732021] transition-all duration-300 cursor-pointer flex flex-col w-full`}
-                  onClick={() => {
-                    if (expandedEvent !== event.name) {
-                      setExpandedEvent(event.name);
-                    }
-                  }}
+                  className={`h-full bg-[#F8F5F2] border ${expandedEvent === event.name ? 'border-[#732021] shadow-md' : 'border-[#D9D2C5]'} rounded-md p-6 hover:border-[#732021] transition-all duration-300 cursor-pointer flex flex-col`}
+                  onClick={() => setExpandedEvent(expandedEvent === event.name ? null : event.name)}
                 >
-                  <h3 className="text-xl font-bold text-[#732021] mb-2">{event.name}</h3>
-                  <p className="text-sm text-[#5C5757] mb-4">
-                    {event.short}
-                  </p>
+                  {/* flex-1 pushes the bottom content all the way down so buttons align perfectly */}
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#732021] mb-2">{event.name}</h3>
+                    <p className="text-sm text-[#5C5757] mb-4">
+                      {event.short}
+                    </p>
+                  </div>
                   
                   {/* Expanded Content Toggle */}
                   {expandedEvent === event.name ? (
-                    <div className="mt-auto pt-4 border-t border-[#D9D2C5] flex flex-col">
+                    <div className="pt-4 border-t border-[#D9D2C5]">
                       <p className="text-sm text-[#4A4545] mb-5 leading-relaxed">
                         {event.details}
                       </p>
                       <Link 
                         href="/register"
                         onClick={(e) => e.stopPropagation()} 
-                        className="block w-full bg-[#732021] text-white text-center text-sm font-bold py-2.5 rounded-md hover:bg-[#8A292A] transition-colors mb-3 shadow-sm"
+                        className="block w-full bg-[#732021] text-white text-center text-sm font-bold py-2.5 rounded-md hover:bg-[#8A292A] transition-colors"
                       >
                         Register Now
                       </Link>
-                      <button 
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setExpandedEvent(null);
-                        }}
-                        className="text-[#732021] text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1 hover:text-[#1A1818] transition-colors"
-                      >
-                        Minimize <span className="text-lg leading-none">-</span>
-                      </button>
                     </div>
                   ) : (
-                    <div className="mt-auto text-[#732021] text-xs font-bold uppercase tracking-wider flex items-center gap-1">
+                    <div className="text-[#732021] text-xs font-bold uppercase tracking-wider flex items-center gap-1">
                       Click for details <span className="text-lg leading-none">+</span>
                     </div>
                   )}
