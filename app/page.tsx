@@ -58,7 +58,7 @@ export default function Home() {
   const eventsList = [
     {
       name: "Kautilya",
-      short: "Showcase your strategic expertise and problem-solving skills.",
+      short: "Showcase your strategic problem-solving skills.",
       details: "Kautilya is our flagship strategy competition. Test your analytical acumen, present innovative solutions, and outsmart the competition to claim the top prize."
     },
     {
