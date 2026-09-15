@@ -2,23 +2,30 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="w-full flex items-center justify-between p-6 border-b border-gray-800">
-      <Link href="/" className="text-2xl font-bold tracking-tighter hover:text-gray-300 transition-colors">
-        YESM
-      </Link>
-      
-      <div className="flex gap-6 text-sm font-medium text-gray-300">
-        <Link href="/#events" className="hover:text-white transition-colors">Events</Link>
-        <Link href="/schedule" className="hover:text-white transition-colors">Schedule</Link>
-        <Link href="/team" className="hover:text-white transition-colors">Team</Link>
+    <nav className="bg-[#F8F5F2] border-b border-[#E5DFD3] py-4 px-6 md:px-12 font-sans">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        
+        {/* Logo / Brand Name */}
+        <Link href="/" className="text-2xl font-extrabold text-[#732021] tracking-tight">
+          YESM 2026
+        </Link>
+        
+        {/* Desktop Links */}
+        <div className="hidden md:flex gap-8 text-sm font-semibold text-[#4A4545]">
+          <Link href="/" className="hover:text-[#732021] transition-colors">Home</Link>
+          <Link href="/about" className="hover:text-[#732021] transition-colors">About</Link>
+          <Link href="/events" className="hover:text-[#732021] transition-colors">Events</Link>
+        </div>
+        
+        {/* Call to Action Button */}
+        <Link 
+          href="/register" 
+          className="bg-[#732021] text-white text-sm font-bold py-2.5 px-6 rounded-md hover:bg-[#8A292A] transition-colors shadow-sm"
+        >
+          Register Now
+        </Link>
+        
       </div>
-      
-      <Link 
-        href="/register" 
-        className="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors"
-      >
-        Register
-      </Link>
     </nav>
   );
 }
