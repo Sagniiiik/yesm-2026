@@ -4,8 +4,8 @@ import Footer from "../../components/footer";
 export default function Team() {
   const convenors = [
     { name: "Arya Dutta", role: "Convenor", phone: "+91 xxxxx xxxxx" },
-    { name: "Sagnik Bhattacharjee", role: "Convenor", phone: "+91 xxxxx xxxxx" },
-    { name: "Srijan Koner", role: "Convenor", phone: "+91 xxxxx xxxxx" },
+    { name: "Meghdoot Saha", role: "Convenor", phone: "+91 xxxxx xxxxx" },
+    { name: "Uponita Debnath", role: "Convenor", phone: "+91 xxxxx xxxxx" },
   ];
 
   return (
