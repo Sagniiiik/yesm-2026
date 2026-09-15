@@ -5,9 +5,57 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Link from "next/link";
 
-export default function Home() {
-  const [expandedEvent, setExpandedEvent] = useState<string | null>(null);
+// 1. We create a dedicated sub-component so every card has its own isolated memory
+function EventCard({ event }: { event: any }) {
+  const [isOpen, setIsOpen] = useState(false);
 
+  return (
+    <div 
+      className={`h-full bg-[#F8F5F2] border ${isOpen ? 'border-[#732021] shadow-md' : 'border-[#D9D2C5]'} rounded-md p-6 hover:border-[#732021] transition-all duration-300 cursor-pointer flex flex-col`}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className="flex-1">
+        <h3 className="text-xl font-bold text-[#732021] mb-2">{event.name}</h3>
+        <p className="text-sm text-[#5C5757] mb-4">
+          {event.short}
+        </p>
+      </div>
+      
+      {isOpen ? (
+        <div className="pt-4 border-t border-[#D9D2C5]">
+          <p className="text-sm text-[#4A4545] mb-5 leading-relaxed">
+            {event.details}
+          </p>
+          <div className="flex gap-3">
+            <Link 
+              href="/register"
+              onClick={(e) => e.stopPropagation()} 
+              className="flex-1 bg-[#732021] text-white text-center text-sm font-bold py-2.5 rounded-md hover:bg-[#8A292A] transition-colors"
+            >
+              Register Now
+            </Link>
+            {/* 2. Explicit minimize button added here */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsOpen(false);
+              }}
+              className="px-4 bg-transparent border border-[#732021] text-[#732021] font-bold rounded-md hover:bg-[#F2E8CF] transition-colors"
+            >
+              Less
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="text-[#732021] text-xs font-bold uppercase tracking-wider flex items-center gap-1">
+          Click for details <span className="text-lg leading-none">+</span>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function Home() {
   const eventsList = [
     {
       name: "Kautilya",
@@ -66,40 +114,9 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-[#1A1818] mb-12 text-center">Featured Competitions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               
+              {/* 3. Mapping over the new isolated component */}
               {eventsList.map((event) => (
-                <div 
-                  key={event.name} 
-                  className={`h-full bg-[#F8F5F2] border ${expandedEvent === event.name ? 'border-[#732021] shadow-md' : 'border-[#D9D2C5]'} rounded-md p-6 hover:border-[#732021] transition-all duration-300 cursor-pointer flex flex-col`}
-                  onClick={() => setExpandedEvent(expandedEvent === event.name ? null : event.name)}
-                >
-                  {/* flex-1 pushes the bottom content all the way down so buttons align perfectly */}
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-[#732021] mb-2">{event.name}</h3>
-                    <p className="text-sm text-[#5C5757] mb-4">
-                      {event.short}
-                    </p>
-                  </div>
-                  
-                  {/* Expanded Content Toggle */}
-                  {expandedEvent === event.name ? (
-                    <div className="pt-4 border-t border-[#D9D2C5]">
-                      <p className="text-sm text-[#4A4545] mb-5 leading-relaxed">
-                        {event.details}
-                      </p>
-                      <Link 
-                        href="/register"
-                        onClick={(e) => e.stopPropagation()} 
-                        className="block w-full bg-[#732021] text-white text-center text-sm font-bold py-2.5 rounded-md hover:bg-[#8A292A] transition-colors"
-                      >
-                        Register Now
-                      </Link>
-                    </div>
-                  ) : (
-                    <div className="text-[#732021] text-xs font-bold uppercase tracking-wider flex items-center gap-1">
-                      Click for details <span className="text-lg leading-none">+</span>
-                    </div>
-                  )}
-                </div>
+                <EventCard key={event.name} event={event} />
               ))}
 
             </div>
