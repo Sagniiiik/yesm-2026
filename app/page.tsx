@@ -5,16 +5,16 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Link from "next/link";
 
-// 1. We create a dedicated sub-component so every card has its own isolated memory
 function EventCard({ event }: { event: any }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div 
-      className={`h-full bg-[#F8F5F2] border ${isOpen ? 'border-[#732021] shadow-md' : 'border-[#D9D2C5]'} rounded-md p-6 hover:border-[#732021] transition-all duration-300 cursor-pointer flex flex-col`}
+      // Removed h-full so the card only grows as much as its own content
+      className={`bg-[#F8F5F2] border ${isOpen ? 'border-[#732021] shadow-md' : 'border-[#D9D2C5]'} rounded-md p-6 hover:border-[#732021] transition-all duration-300 cursor-pointer flex flex-col`}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="flex-1">
+      <div>
         <h3 className="text-xl font-bold text-[#732021] mb-2">{event.name}</h3>
         <p className="text-sm text-[#5C5757] mb-4">
           {event.short}
@@ -22,7 +22,7 @@ function EventCard({ event }: { event: any }) {
       </div>
       
       {isOpen ? (
-        <div className="pt-4 border-t border-[#D9D2C5]">
+        <div className="pt-4 border-t border-[#D9D2C5] mt-auto">
           <p className="text-sm text-[#4A4545] mb-5 leading-relaxed">
             {event.details}
           </p>
@@ -34,7 +34,6 @@ function EventCard({ event }: { event: any }) {
             >
               Register Now
             </Link>
-            {/* 2. Explicit minimize button added here */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -47,7 +46,7 @@ function EventCard({ event }: { event: any }) {
           </div>
         </div>
       ) : (
-        <div className="text-[#732021] text-xs font-bold uppercase tracking-wider flex items-center gap-1">
+        <div className="mt-auto text-[#732021] text-xs font-bold uppercase tracking-wider flex items-center gap-1">
           Click for details <span className="text-lg leading-none">+</span>
         </div>
       )}
@@ -84,7 +83,6 @@ export default function Home() {
       <Navbar />
       
       <main className="flex-1">
-        {/* Hero Section */}
         <section className="max-w-6xl mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center">
           <h1 className="text-5xl md:text-7xl font-extrabold text-[#1A1818] mb-6 tracking-tight">
             YESM 2026
@@ -108,13 +106,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Events Preview Section */}
         <section id="events" className="bg-white border-y border-[#E5DFD3] py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-[#1A1818] mb-12 text-center">Featured Competitions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            {/* Added items-start here to prevent grid cards from stretching to match the tallest one */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
               
-              {/* 3. Mapping over the new isolated component */}
               {eventsList.map((event) => (
                 <EventCard key={event.name} event={event} />
               ))}
