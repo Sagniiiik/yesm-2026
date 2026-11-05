@@ -7,7 +7,11 @@ export default function Navbar() {
         
         {/* Logo / Brand Name */}
         <Link href="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="YESM 2027 Logo" className="h-10 w-auto object-contain" />
+          <img 
+            src="/logo.png" 
+            alt="YESM 2027 Logo" 
+            className="h-10 w-auto object-contain mix-blend-multiply" 
+          />
           <span className="text-2xl font-extrabold text-[#5B2366] tracking-tight">YESM 2027</span>
         </Link>
         
