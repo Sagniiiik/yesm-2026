@@ -2,15 +2,15 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-[#F8F5F2] border-b border-[#E5DFD3] py-4 px-6 md:px-12 font-sans">
+    <nav className="bg-[#F8F5F2] border-b border-[#E5DFD3] py-2 md:py-4 px-6 md:px-12 font-sans">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         
-        {/* Logo Only */}
+        {/* Enlarged Logo */}
         <Link href="/" className="flex items-center">
           <img 
             src="/logo.png" 
             alt="YESM 2027 Logo" 
-            className="h-10 w-auto object-contain mix-blend-multiply" 
+            className="h-16 md:h-24 w-auto object-contain mix-blend-multiply scale-110 md:scale-125 transform origin-left" 
           />
         </Link>
         

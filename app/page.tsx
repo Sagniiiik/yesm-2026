@@ -137,17 +137,17 @@ export default function Home() {
       <main className="flex-1 flex items-center justify-center p-6 text-center mt-12 mb-12">
         <div className="flex flex-col items-center w-full">
           
-          {/* Logo size reduced to max-w-md for perfect vertical proportion */}
+          {/* Increased size and added negative margins (-mt-12, -mb-16) to close the gaps */}
           <img 
             src="/logo.png" 
             alt="YESM 2027 Logo" 
-            className="w-full max-w-[250px] md:max-w-md h-auto mb-8 object-contain mix-blend-multiply" 
+            className="w-full max-w-[300px] md:max-w-lg h-auto -mt-12 -mb-8 md:-mb-16 object-contain mix-blend-multiply" 
           />
           
-          <div className="inline-block bg-[#F2E8CF] border border-[#D4C391] text-[#7A5F1C] px-5 py-2 rounded-md text-sm font-bold tracking-wide uppercase mb-6 shadow-sm">
+          <div className="inline-block bg-[#F2E8CF] border border-[#D4C391] text-[#7A5F1C] px-5 py-2 rounded-md text-sm font-bold tracking-wide uppercase mb-6 shadow-sm relative z-10">
             Coming Soon
           </div>
-          <p className="text-lg text-[#4A4545] max-w-xl mx-auto leading-relaxed">
+          <p className="text-lg text-[#4A4545] max-w-xl mx-auto leading-relaxed relative z-10">
             The premier collegiate summit is currently in the planning phase. Check back shortly for event details, schedules, and registration.
           </p>
         </div>
