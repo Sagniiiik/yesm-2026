@@ -126,7 +126,6 @@
 //     </div>
 //   );
 // }
-
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
@@ -136,10 +135,15 @@ export default function Home() {
       <Navbar />
       
       <main className="flex-1 flex items-center justify-center p-6 text-center mt-12 mb-12">
-        <div>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-[#1A1818] mb-6 tracking-tight">
-            YESM 2027
-          </h1>
+        <div className="flex flex-col items-center">
+          
+          {/* Replaced the H1 text with the Logo Image */}
+          <img 
+            src="/logo.png" 
+            alt="YESM 2027 Logo" 
+            className="h-28 md:h-40 w-auto mb-8 object-contain drop-shadow-sm" 
+          />
+          
           <div className="inline-block bg-[#F2E8CF] border border-[#D4C391] text-[#7A5F1C] px-5 py-2 rounded-md text-sm font-bold tracking-wide uppercase mb-6 shadow-sm">
             Coming Soon
           </div>
