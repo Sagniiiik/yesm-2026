@@ -138,7 +138,7 @@ export default function Home() {
       <main className="flex-1 flex items-center justify-center p-6 text-center mt-12 mb-12">
         <div>
           <h1 className="text-5xl md:text-7xl font-extrabold text-[#1A1818] mb-6 tracking-tight">
-            YESM 2026
+            YESM 2027
           </h1>
           <div className="inline-block bg-[#F2E8CF] border border-[#D4C391] text-[#7A5F1C] px-5 py-2 rounded-md text-sm font-bold tracking-wide uppercase mb-6 shadow-sm">
             Coming Soon

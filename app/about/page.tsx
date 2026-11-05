@@ -50,7 +50,7 @@ export default function About() {
       <main className="flex-1 flex items-center justify-center p-6 text-center mt-12 mb-12">
         <div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1818] mb-4 tracking-tight">
-            About YESM 2026
+            About YESM 2027
           </h1>
           <div className="inline-block bg-[#F2E8CF] border border-[#D4C391] text-[#7A5F1C] px-4 py-1.5 rounded-md text-sm font-bold tracking-wide uppercase mb-6 shadow-sm">
             Coming Soon

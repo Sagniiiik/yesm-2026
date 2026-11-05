@@ -7,7 +7,7 @@ export default function Footer() {
         
         {/* Brand Column */}
         <div>
-          <h2 className="text-xl font-bold text-[#F8F5F2] mb-4 tracking-tight">YESM 2026</h2>
+          <h2 className="text-xl font-bold text-[#F8F5F2] mb-4 tracking-tight">YESM 2027</h2>
           <p className="text-sm leading-relaxed text-[#A39C9C]">
             The premier collegiate event of the year. Join us for a weekend of innovation, competition, and excellence.
           </p>
@@ -34,7 +34,7 @@ export default function Footer() {
       
       {/* Copyright Bar */}
       <div className="max-w-6xl mx-auto mt-12 pt-6 border-t border-[#3A3535] text-xs text-center text-[#7A7575]">
-        &copy; 2026 YESM. All rights reserved.
+        &copy; 2027 YESM. All rights reserved.
       </div>
     </footer>
   );
