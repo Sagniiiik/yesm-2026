@@ -137,11 +137,11 @@ export default function Home() {
       <main className="flex-1 flex items-center justify-center p-6 text-center mt-12 mb-12">
         <div className="flex flex-col items-center w-full">
           
-          {/* Logo made much larger and white background removed via CSS */}
+          {/* Logo size reduced to max-w-md for perfect vertical proportion */}
           <img 
             src="/logo.png" 
             alt="YESM 2027 Logo" 
-            className="w-full max-w-md md:max-w-3xl h-auto mb-8 object-contain mix-blend-multiply" 
+            className="w-full max-w-[250px] md:max-w-md h-auto mb-8 object-contain mix-blend-multiply" 
           />
           
           <div className="inline-block bg-[#F2E8CF] border border-[#D4C391] text-[#7A5F1C] px-5 py-2 rounded-md text-sm font-bold tracking-wide uppercase mb-6 shadow-sm">
