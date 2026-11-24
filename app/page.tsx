@@ -128,32 +128,103 @@
 // }
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F8F5F2] text-[#2A2626] flex flex-col font-sans">
-      <Navbar />
+    <div className="min-h-screen bg-[#F8F5F2] text-[#2A2626] flex flex-col font-sans relative overflow-hidden">
+      {/* Subtle Background Texture */}
+      <div 
+        className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none" 
+        style={{ backgroundImage: "radial-gradient(#5B2366 2px, transparent 2px)", backgroundSize: "32px 32px" }}
+      ></div>
       
-      <main className="flex-1 flex items-center justify-center p-6 text-center mt-12 mb-12">
-        <div className="flex flex-col items-center w-full">
-          
-          {/* Increased size and added negative margins (-mt-12, -mb-16) to close the gaps */}
-          <img 
-            src="/logo.png" 
-            alt="YESM 2027 Logo" 
-            className="w-full max-w-[300px] md:max-w-lg h-auto -mt-12 -mb-8 md:-mb-16 object-contain mix-blend-multiply" 
-          />
-          
-          <div className="inline-block bg-[#F2E8CF] border border-[#D4C391] text-[#7A5F1C] px-5 py-2 rounded-md text-sm font-bold tracking-wide uppercase mb-6 shadow-sm relative z-10">
-            Coming Soon
-          </div>
-          <p className="text-lg text-[#4A4545] max-w-xl mx-auto leading-relaxed relative z-10">
-            The premier collegiate summit is currently in the planning phase. Check back shortly for event details, schedules, and registration.
-          </p>
-        </div>
-      </main>
+      <div className="relative z-10 flex flex-col min-h-screen w-full">
+        <Navbar />
+        
+        <main className="flex-1 w-full">
+          {/* HERO SECTION */}
+          <section className="relative w-full bg-[#5B2366] text-[#E5DFD3] py-24 md:py-32 px-6 flex flex-col items-center text-center overflow-hidden border-b-[8px] border-[#D4C391]">
+            {/* Background Glow Effect */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#43194B] rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+            
+            <div className="relative z-10 max-w-5xl mx-auto">
+              <div className="inline-block border border-[#D4C391]/40 text-[#D4C391] text-xs md:text-sm font-bold tracking-widest uppercase px-5 py-2 rounded-full mb-8 shadow-sm bg-[#5B2366]/50 backdrop-blur-sm">
+                4th & 5th February 2027 • Jadavpur University
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 text-white drop-shadow-2xl">
+                YOUNG ECONOMIST <br className="hidden md:block" /> STUDENTS' MEET
+              </h1>
+              
+              <p className="text-xl md:text-3xl text-[#D4C391] font-bold tracking-widest uppercase mb-10 max-w-3xl mx-auto drop-shadow-md">
+                #BeyondTheParadigm
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                <Link 
+                  href="/register" 
+                  className="bg-[#D4C391] text-[#5B2366] text-lg font-extrabold py-4 px-10 rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl w-full sm:w-auto"
+                >
+                  Register Now
+                </Link>
+                <Link 
+                  href="/events" 
+                  className="bg-transparent border-2 border-[#D4C391] text-[#D4C391] text-lg font-extrabold py-4 px-10 rounded-full hover:bg-[#D4C391]/10 hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                >
+                  Explore Events
+                </Link>
+              </div>
+            </div>
+          </section>
 
-      <Footer />
+          {/* QUICK STATS BAR */}
+          <section className="py-12 bg-white border-b border-[#E5DFD3] relative z-20 shadow-sm">
+            <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-[#E5DFD3]">
+              <div>
+                <h4 className="text-3xl md:text-4xl font-extrabold text-[#5B2366] mb-1">19th</h4>
+                <p className="text-xs md:text-sm font-bold tracking-widest text-[#7A5F1C] uppercase">Edition</p>
+              </div>
+              <div>
+                <h4 className="text-3xl md:text-4xl font-extrabold text-[#5B2366] mb-1">2</h4>
+                <p className="text-xs md:text-sm font-bold tracking-widest text-[#7A5F1C] uppercase">Days</p>
+              </div>
+              <div>
+                <h4 className="text-3xl md:text-4xl font-extrabold text-[#5B2366] mb-1">12</h4>
+                <p className="text-xs md:text-sm font-bold tracking-widest text-[#7A5F1C] uppercase">Events</p>
+              </div>
+              <div>
+                <h4 className="text-3xl md:text-4xl font-extrabold text-[#5B2366] mb-1">2000+</h4>
+                <p className="text-xs md:text-sm font-bold tracking-widest text-[#7A5F1C] uppercase">Participants</p>
+              </div>
+            </div>
+          </section>
+
+          {/* THEME INTRODUCTION */}
+          <section className="py-20 md:py-32 px-6 max-w-4xl mx-auto text-center">
+            <h2 className="text-sm font-bold tracking-widest uppercase text-[#7A5F1C] mb-4 flex items-center justify-center gap-2">
+              <span className="w-8 h-1 bg-[#D4C391] rounded-full"></span>
+              Official Theme
+              <span className="w-8 h-1 bg-[#D4C391] rounded-full"></span>
+            </h2>
+            <h3 className="text-3xl md:text-5xl font-extrabold text-[#5B2366] mb-8 leading-tight">
+              Reimagining India's Development Trajectory
+            </h3>
+            <p className="text-lg md:text-xl text-[#4A4545] leading-relaxed mb-12">
+              Navigating geopolitical transitions, emerging technologies, and the new trade order. Join tomorrow's economists, policymakers, and business leaders to envision an equitable and industrious future.
+            </p>
+            <Link 
+              href="/about" 
+              className="group inline-flex items-center gap-2 text-[#5B2366] font-bold text-lg hover:text-[#7A5F1C] transition-colors"
+            >
+              Read More About YESM 
+              <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+            </Link>
+          </section>
+
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
