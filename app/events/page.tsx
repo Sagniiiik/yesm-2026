@@ -339,7 +339,7 @@ export default function Events() {
       formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeccjgRP6Re0bSkpYGzYTSETqgi05J3jbbKE4QDNi-9OYCfiA/viewform?usp=publish-editor'
     },
    { 
-      id: 'pitching-it', mode: 'OFFLINE', title: 'Pitching It (Shark Tank)', cost: 'Free', deadline: 'Jan 25, 2027',
+      id: 'pitching-it', mode: 'HYBRID', title: 'Pitching It (Shark Tank)', cost: 'Free', deadline: 'Jan 25, 2027',
       desc: 'Shark Tank simulation. Pitch your groundbreaking startup idea or product to a panel of investors.', 
       rules: 'Submit pitch deck (max 10 slides). Final offline pitch is 5+1 minutes followed by a 3 min Q&A. Exceeding time limits results in negative marking.',
       formUrl: 'https://forms.gle/NibqJtaYLGA4WDGJ7'

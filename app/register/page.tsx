@@ -329,7 +329,7 @@ const registrationEvents = [
   {
     id: "pitching-it",
     rulebookHref: "/rulebook#pitching-it",
-    mode: "OFFLINE",
+    mode: "HYBRID",
     title: "Pitching It",
     subtitle: "Shark Tank",
     cost: "Free",
