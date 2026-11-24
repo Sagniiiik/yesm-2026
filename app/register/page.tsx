@@ -98,8 +98,8 @@ import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
 const registrationEvents = [
-  { id: "colloquium", mode: "ONLINE", title: "Colloquium", subtitle: "Paper Presentation", cost: "Free", formUrl: "https://forms.gle/..." }, // 👈 Replace with your Colloquium link
-  { id: "pa-writo", mode: "ONLINE", title: "Pa-Writo", subtitle: "Article Writing", cost: "Free", formUrl: "https://forms.gle/..." }, // 👈 Replace with your Pa-Writo link
+  { id: "colloquium", mode: "ONLINE", title: "Colloquium", subtitle: "Paper Presentation", cost: "Free", formUrl: "https://forms.gle/xiFF6mHYc4R93SuQ9" }, 
+  { id: "pa-writo", mode: "ONLINE", title: "Pa-Writo", subtitle: "Article Writing", cost: "Free", formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfc8_xgJ4Zm7XZzj0XScu7M8YVP3Vt-R9ilQ3eE7CljkOFixg/viewform?usp=preview" }, 
   { id: "fiscal-pix", mode: "ONLINE", title: "Fiscal-Pix", subtitle: "Photography", cost: "Free", formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfVBbILhPMKjkRUvib7lkYqXzNLmQJfWPTgxB44jMsnelxIkg/viewform?usp=header" },
   { id: "focalibre", mode: "ONLINE", title: "Focalibre", subtitle: "Short Film Making", cost: "Free", formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSciIfMAWOXf5Q7vIOi5BaWAuYNJsFSI841JbSRISp8AwXoGcw/viewform?usp=publish-editor" },
   { id: "artflation", mode: "ONLINE", title: "Artflation", subtitle: "Poster Making", cost: "Free", formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdaHAJQvwMA6-ysAOwgxSThjWeAu0rdHl2inqRB9gtrisaIZw/viewform?usp=publish-editor" },
