@@ -348,6 +348,10 @@ export default function Rulebook() {
                 <li>The participant(s) will be allowed 10 minutes to present their paper which will be followed by 2 minutes for a question and answer session.</li>
                 <li>The finals will be held in person at the Jadavpur University campus.</li>
               </ul>
+              
+              <p><strong>Contact:</strong><br />
+              Adrijeeta Majumder +91 90731 86563<br />
+              Saimili Banerjee +91 74391 25473</p>
             </div>
           </details>
 
@@ -387,7 +391,9 @@ export default function Rulebook() {
               7. PARTICIPANTS SHALL ALSO BE ALLOWED TO USE TEACHING AIDS LIKE PPTS.WORD DOCUMENTS SCANNED COPIES OF HANDWRITTEN NOTES ETC. DURING BOTH ROUNDS PROVIDED THAT THEY ARE SELF-PREPARED ANY PLAGIARISM SHALL LEAD TO IMMEDIATE DISQUALIFICATION.<br />
               8. THE LAST DATE FOR REGISTRATION IS 31ST JANUARY, 2027.</p>
 
-              <p><strong>Contact</strong><br />Shirshajit Mukherjee<br />Krishnendu Ghosh</p>
+              <p><strong>Contact:</strong><br />
+              Krishnendu Ghosh +91 6295 193 364<br />
+              Shirshajit Mukherjee +91 90516 70058</p>
             </div>
           </details>
 
@@ -435,9 +441,9 @@ export default function Rulebook() {
               6. The decision of the organising committee and judging panel will be final.<br />
               7. Additional guidelines will be communicated to participants upon registration.</p>
 
-              <p><strong>CONTACT</strong><br />
-              Oyshi Mukherjee<br />Email: oyshi0911@gmail.com<br />Phone: +91 8910959991<br />
-              Kingshuk Bhandary<br />Email: kingshukbhandaryedm@gmail.com<br />Phone: +91 6291108578</p>
+              <p><strong>Contact:</strong><br />
+              Oyshi Mukherjee +91 89109 59991<br />
+              Kingshuk Bhandary +91 62911 08578</p>
             </div>
           </details>
 
@@ -483,9 +489,9 @@ export default function Rulebook() {
               5.Entries will be evaluated based on the novelty and market viability of the idea, presentation clarity and engagement, and how effectively the team addresses judges' queries during the Q&A.<br />
               6. The organizers reserve the right to modify rules with prior notification. The decision of the organizing committee and judging panel will be final and binding.</p>
 
-              <p><strong>CONTACT</strong><br />
-              Sumedha Kar<br />Phone: +91 93302 96249<br />
-              Anshuman Barick<br />Phone: +91 70443 57105</p>
+              <p><strong>Contact:</strong><br />
+              Sumedha Kar +91 93302 96249<br />
+              Anshuman Barick +91 70443 57105</p>
             </div>
           </details>
 
@@ -530,10 +536,9 @@ export default function Rulebook() {
               7. Anyone who resorts to unfair means during the quiz will have their team disqualified.<br />
               8. Last date of registration is 31st January 2027, 11:59pm. Registration form will close after this.</p>
 
-              <p><strong>Contacts Details:</strong><br />
-              I) Souptik Mandal - 8436920336<br />
-              II) Bibhu Prasad Rakshit - 9339798776<br />
-              HAPPY QUIZZING.</p>
+              <p><strong>Contact:</strong><br />
+              Souptik Mondal +91 84369 20336<br />
+              Bibhu Prasad Rakshit +91 93397 98776</p>
             </div>
           </details>
 
@@ -577,6 +582,11 @@ export default function Rulebook() {
               6. Each player in the auction will carry a pre-assigned rating out of 10.<br />
               7. The team whose Playing XI achieves the highest total rating will be declared the Winner.<br />
               8. Other auction-related rules will be disclosed on the day of the event.</p>
+
+              <p><strong>Contact:</strong><br />
+              Abhinabha Paul +91 74390 82934<br />
+              Ankit Das +91 74393 05156<br />
+              Tiasa Kundu +91 93300 17485</p>
             </div>
           </details>
 
@@ -615,7 +625,10 @@ export default function Rulebook() {
               8. Participants may refer to notes occasionally but they are not allowed to read out everything from their notes. Participants are not allowed to refer to any digital devices, like smartphones, tabs, etc.while delivering their speech. However, the use of flashcards is allowed.<br />
               9. The time limit should be strictly adhered to, and any breach of the same will lead to negative marking.</p>
 
-              <p><strong>Contact:-</strong> Rannvijay Roy, Adwitiyo Bandyopadhyay, Shiladitya Banerjee</p>
+              <p><strong>Contact:</strong><br />
+              Adwitiyo Bandyopadhyay +91 74392 58182<br />
+              Rannvijay Roy +91 87775 89805<br />
+              Shiladitya Banerjee +91 97486 18583</p>
             </div>
           </details>
 
@@ -654,7 +667,9 @@ export default function Rulebook() {
               9. Formal wear for the first day, ethnic wear for the second day<br />
               10. Participants can participate in other online events.</p>
 
-              <p><strong>Contact</strong><br />Jaita Bhaumik<br />Abhirupak Chattopadhyay</p>
+              <p><strong>Contact:</strong><br />
+              Abhirupak Chattopadhyay +91 91473 17924<br />
+              Jaita Bhowmik +91 93304 27674</p>
             </div>
           </details>
 
@@ -686,7 +701,10 @@ export default function Rulebook() {
               6. Finalists will be required to provide the organizers with valid proof of their present qualification.<br />
               Note: Further details will be given prior to the event.</p>
 
-              <p><strong>Contact</strong><br />Shounak Saha<br />Shantanu Das<br />Arkaprabha Deb</p>
+              <p><strong>Contact:</strong><br />
+              Shounak Saha +91 79804 82242<br />
+              Arkaprabha Deb +91 90739 74967<br />
+              Shantanu Das +91 62908 42770</p>
             </div>
           </details>
 
