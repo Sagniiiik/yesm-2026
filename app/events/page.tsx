@@ -286,74 +286,87 @@ export default function Events() {
       topics: ["Green Transition vs. Growth", "Chips, Critical Minerals and Cloud", "Her Rupee vs His Rupee"],
       formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfc8_xgJ4Zm7XZzj0XScu7M8YVP3Vt-R9ilQ3eE7CljkOFixg/viewform?usp=preview'
     },
-    { 
+  { 
       id: 'fiscal-pix', mode: 'ONLINE', title: 'Fiscal-Pix (Photography)', cost: 'Free', deadline: 'Jan 23, 2027',
       desc: 'Capture life, economics, and society through the lens of your camera.',
       rules: 'High-res JPEG/JPG format. EXIF data is mandatory. Minor edits only (brightness/contrast); no heavy manipulation or AI. Must include a short caption explaining context.',
-      topics: ["Two Indias - One Future", "The Unequal Journey (Growth and Its Gaps)"]
+      topics: ["Two Indias - One Future", "The Unequal Journey (Growth and Its Gaps)"],
+      formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfVBbILhPMKjkRUvib7lkYqXzNLmQJfWPTgxB44jMsnelxIkg/viewform?usp=header'
     },
-    { 
+   { 
       id: 'focalibre', mode: 'ONLINE', title: 'Focalibre (Short Film Making)', cost: 'Free', deadline: 'Jan 23, 2027',
       desc: 'Tell a powerful story that makes people laugh, think, or feel something real.',
-      rules: '3 to 5 minutes duration. Horizontal 1920x1080 MP4 format. Subtitles are mandatory regardless of language. Submitted via Drive link.'
+      rules: '3 to 5 minutes duration. Horizontal 1920x1080 MP4 format. Subtitles are mandatory regardless of language. Submitted via Drive link.',
+      formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSciIfMAWOXf5Q7vIOi5BaWAuYNJsFSI841JbSRISp8AwXoGcw/viewform?usp=publish-editor'
     },
-    { 
+   { 
       id: 'artflation', mode: 'ONLINE', title: 'Artflation (Poster Making)', cost: 'Free', deadline: 'Jan 23, 2027',
       desc: 'Turn a complex idea into a single visual that stops everyone in their tracks.',
       rules: 'Digital format (JPEG, PNG, PDF) at 300 DPI. Dimensions must be A3, A4, or 16:9. No AI generation, templates, or watermarks. Must include a 50-100 word description of the concept.',
-      topics: ["Redefining Humanity in the Age of AI", "The Unfinished Generation"]
+      topics: ["Redefining Humanity in the Age of AI", "The Unfinished Generation"],
+      formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdaHAJQvwMA6-ysAOwgxSThjWeAu0rdHl2inqRB9gtrisaIZw/viewform?usp=publish-editor'
     },
-    { 
+   { 
       id: 'econmotion', mode: 'ONLINE', title: 'Econmotion (Reel Making)', cost: 'Free', deadline: 'Jan 23, 2027',
       desc: 'Turn an everyday moment into a viral-worthy reel that demands a replay.',
       rules: '30-120 seconds duration. Vertical 9:16 format (MP4, 1080p). Up to 3 members per team. AI is strictly prohibited. Must include a 50-100 word description.',
-      topics: ["FOMO as a Market Driver", "Same Salaries/Different Lives", "A Generation on Rent", "Illusion of Free"]
+      topics: ["FOMO as a Market Driver", "Same Salaries/Different Lives", "A Generation on Rent", "Illusion of Free"],
+      formUrl: 'https://forms.gle/hBf9dPugc7ipzs4R9'
     },
-    { 
+  { 
       id: 'memesis', mode: 'ONLINE', title: 'Memesis (Meme Making)', cost: 'Free', deadline: 'Jan 25, 2027',
       desc: 'Where humour meets sharp thinking. Just one perfect image and a punchline.',
       rules: 'Max 2 original memes per participant. Existing templates permitted with original captions. No AI tools allowed. Submitted via Google Form.',
-      topics: ["The Last Minute Economy", "The Placement Paradox", "Attendance vs Academic Survival", "The Election Economy", "Dilemma of Exams"]
+      topics: ["The Last Minute Economy", "The Placement Paradox", "Attendance vs Academic Survival", "The Election Economy", "Dilemma of Exams"],
+      formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScAiWBFJQfdOydkB5hh44pgwnhQPdSbH3FkozitVichYpqNIA/viewform?usp=header'
     },
     { 
       id: 'equizilibrium', mode: 'OFFLINE', title: 'Equizilibrium (Quiz Competition)', cost: '₹150 / team', deadline: 'Jan 31, 2027',
       desc: 'U-25 General Quiz. A delightful interplay of wisdom, trivia, and analytical thinking.', 
-      rules: 'U-25 General Quiz. Max 3 members per team (Lone wolves permitted). Prelims will be a written test. Top 6 teams qualify for the final pounce-bounce format stage.'
+      rules: 'U-25 General Quiz. Max 3 members per team (Lone wolves permitted). Prelims will be a written test. Top 6 teams qualify for the final pounce-bounce format stage.',
+      formUrl: 'https://forms.gle/tc3X3Sx5GNEhPkPRA'
     },
-    { 
+   { 
       id: 'ecogency', mode: 'OFFLINE', title: 'Ecogency (Oxford Style Debate)', cost: '₹150/p | ₹300/team', deadline: 'Jan 31, 2027',
       desc: 'Words are weapons and logic is your armor. No middle ground allowed.', 
-      rules: 'Teams of 2 (one speaking for, one against). Individual registrants will be randomly paired. Language chosen (Bengali, Hindi, or English) cannot be changed mid-speech.'
+      rules: 'Teams of 2 (one speaking for, one against). Individual registrants will be randomly paired. Language chosen (Bengali, Hindi, or English) cannot be changed mid-speech.',
+      formUrl: 'https://docs.google.com/forms/d/1TwkM-_o1gYBB_bJdC1SJuqhSZeoaysdqh65fcX4C3H4/edit'
     },
-    { 
+   { 
       id: 'conferencia', mode: 'OFFLINE', title: 'Conferencia (Committee Simulation)', cost: 'Fees Apply', deadline: 'Jan 31, 2027',
       desc: 'Committee Simulation (WTO). Sharp research, persuasive diplomacy, and powerful speaking.', 
-      rules: 'World Trade Organization committee simulation. English is the official language. Formal wear for Day 1, Ethnic wear for Day 2. Fees: ₹650 Single / ₹1200 Double.'
+      rules: 'World Trade Organization committee simulation. English is the official language. Formal wear for Day 1, Ethnic wear for Day 2. Fees: ₹650 Single / ₹1200 Double.',
+      formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeccjgRP6Re0bSkpYGzYTSETqgi05J3jbbKE4QDNi-9OYCfiA/viewform?usp=publish-editor'
     },
-    { 
+   { 
       id: 'pitching-it', mode: 'OFFLINE', title: 'Pitching It (Shark Tank)', cost: 'Free', deadline: 'Jan 25, 2027',
       desc: 'Shark Tank simulation. Pitch your groundbreaking startup idea or product to a panel of investors.', 
-      rules: 'Submit pitch deck (max 10 slides). Final offline pitch is 5+1 minutes followed by a 3 min Q&A. Exceeding time limits results in negative marking.'
+      rules: 'Submit pitch deck (max 10 slides). Final offline pitch is 5+1 minutes followed by a 3 min Q&A. Exceeding time limits results in negative marking.',
+      formUrl: 'https://forms.gle/NibqJtaYLGA4WDGJ7'
     },
-    { 
-      id: 'resolving-it', mode: 'OFFLINE', title: 'Resolving It (Case Study Analysis)', cost: 'Free', deadline: 'Jan 23, 2027',
-      desc: 'Identify underlying challenges and develop structured, effective solutions.', 
-      rules: 'Teams of 2-4 members. Max 4 slides in PPT/PDF format. Top 8 teams qualify for offline finals featuring a 10 min presentation and 3 min Q&A.'
+  { 
+      id: 'resolving-it', mode: 'OFFLINE', title: 'Resolving It (Case Study)', cost: 'Free', deadline: 'Jan 25, 2027',
+      desc: 'Solve real-world business problems under pressure. Think, strategize, and pitch.', 
+      rules: 'Teams of 2-3 members. Max 10 slides (excluding title & appendix). Prelims evaluated online. Top 8 teams qualify for offline presentation at Jadavpur University.',
+      formUrl: 'https://forms.gle/5j3P6ADGWxVZGHbe9'
     },
-    { 
+   { 
       id: 'proffing-it', mode: 'HYBRID', title: 'Proffing-It (Mock Classroom)', cost: 'Free', deadline: 'Jan 31, 2027',
       desc: 'Move to the other side of the table and deliver a compelling academic lecture.', 
-      rules: 'Open exclusively to enrolled UG Economics students. Individual participation. Prelims (Online): 6 min lecture + 4 min Q&A. Finals (Offline): 10 min lecture + 5 min Q&A. Topics mailed 36-48 hrs prior.'
+      rules: 'Open exclusively to enrolled UG Economics students. Individual participation. Prelims (Online): 6 min lecture + 4 min Q&A. Finals (Offline): 10 min lecture + 5 min Q&A. Topics mailed 36-48 hrs prior.',
+      formUrl: 'https://forms.gle/t5kwivrFQ6qebFh58'
     },
-    { 
-      id: 'bid-o-nomics', mode: 'OFFLINE', title: 'Bid-o-nomics (Mock IPL Auction)', cost: '₹200 / team', deadline: 'Jan 31, 2027',
-      desc: 'Build your dream squad with an ₹80 crore purse. Brains, bids, and bold moves.', 
-      rules: 'Written cricket quiz prelims. Auction purse of ₹80 crore. Squads must maintain minimums: 3 batsmen, 3 bowlers, 3 all-rounders, 1 wicketkeeper. Max 4 overseas players in Playing XI.'
+{ 
+      id: 'bid-o-nomics', mode: 'OFFLINE', title: 'Bid-o-nomics (The Eco-Nomic Auction)', cost: '₹200 / team', deadline: 'Jan 31, 2027',
+      desc: 'Strategize, bid, and outsmart the market in a high-stakes economic auction.', 
+      rules: 'Teams of 2-4 members. Budget management and valuation accuracy determine the winner. No external calculators or devices permitted during the live bidding round.',
+      formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSey0VxoU0l8LVkRguguAD7XSCENEm_cO2FYl25iaCGf13iTgw/viewform?usp=publish-editor'
     },
-    { 
-      id: 'chaturanga', mode: 'OFFLINE', title: 'Chaturanga (Flagship Event)', cost: 'Free', deadline: 'Jan 31, 2027',
-      desc: 'Untangle intricate logic-driven puzzles and activities in the ultimate showdown.', 
-      rules: 'A logic-driven challenge where every decision counts. Usage of mobile phones is strictly prohibited. No prior preparation required.'
+   { 
+      id: 'chaturanga', mode: 'OFFLINE', title: 'Chaturanga (Chess Tournament)', cost: '₹100 / player', deadline: 'Jan 31, 2027',
+      desc: 'Outthink, outmaneuver, and checkmate your way to victory on the 64 squares.', 
+      rules: 'Individual participation. Rapid format (10+0 or 15+0). Standard FIDE rules apply. Arbiters decision is final.',
+      formUrl: 'https://forms.cloud.microsoft/r/uqJeAxxJNv?embed=true'
     },
   ];
 
