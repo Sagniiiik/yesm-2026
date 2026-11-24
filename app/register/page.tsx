@@ -321,7 +321,7 @@ const registrationEvents = [
     rulebookHref: "/rulebook#conferencia",
     mode: "OFFLINE",
     title: "Conferencia",
-    subtitle: "Committee Simulation",
+    subtitle: "MUN Committee Simulation",
     cost: "Fees Apply",
     formUrl:
       "https://docs.google.com/forms/d/e/1FAIpQLSeccjgRP6Re0bSkpYGzYTSETqgi05J3jbbKE4QDNi-9OYCfiA/viewform?usp=publish-editor",

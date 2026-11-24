@@ -332,10 +332,10 @@ export default function Events() {
       rules: 'Teams of 2 (one speaking for, one against). Individual registrants will be randomly paired. Language chosen (Bengali, Hindi, or English) cannot be changed mid-speech.',
       formUrl: 'https://docs.google.com/forms/d/1TwkM-_o1gYBB_bJdC1SJuqhSZeoaysdqh65fcX4C3H4/edit'
     },
-   { 
-      id: 'conferencia', mode: 'OFFLINE', title: 'Conferencia (Committee Simulation)', cost: 'Fees Apply', deadline: 'Jan 31, 2027',
-      desc: 'Committee Simulation (WTO). Sharp research, persuasive diplomacy, and powerful speaking.', 
-      rules: 'World Trade Organization committee simulation. English is the official language. Formal wear for Day 1, Ethnic wear for Day 2. Fees: ₹650 Single / ₹1200 Double.',
+{ 
+      id: 'conferencia', mode: 'OFFLINE', title: 'Conferencia (MUN Committee Simulation)', cost: 'Fees Apply', deadline: 'Jan 31, 2027',
+      desc: 'MUN-inspired WTO committee simulation that goes beyond traditional UN formats. Sharp research, persuasive diplomacy, and powerful speaking.', 
+      rules: 'Two-day offline WTO committee simulation (Feb 4–5, 2027) inspired by MUN formats, with no prelims and a study guide provided. Open to +2, UG, and PG students; first-come, first-served allotment; English is the official language; formal wear on Day 1, ethnic wear on Day 2. Fees: Early Bird (ends Jan 8) ₹550 Single / ₹1000 Double; Round 1 ₹650 Single / ₹1200 Double.',
       formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeccjgRP6Re0bSkpYGzYTSETqgi05J3jbbKE4QDNi-9OYCfiA/viewform?usp=publish-editor'
     },
    { 
