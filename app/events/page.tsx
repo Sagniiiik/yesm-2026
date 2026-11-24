@@ -357,7 +357,7 @@ export default function Events() {
       formUrl: 'https://forms.gle/t5kwivrFQ6qebFh58'
     },
 { 
-      id: 'bid-o-nomics', mode: 'OFFLINE', title: 'Bid-o-nomics (The Eco-Nomic Auction)', cost: '₹200 / team', deadline: 'Jan 31, 2027',
+      id: 'bid-o-nomics', mode: 'OFFLINE', title: 'Bid-o-nomics (Mock Auction)', cost: '₹200 / team', deadline: 'Jan 31, 2027',
       desc: 'Strategize, bid, and outsmart the market in a high-stakes economic auction.', 
       rules: 'Teams of 2-4 members. Budget management and valuation accuracy determine the winner. No external calculators or devices permitted during the live bidding round.',
       formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSey0VxoU0l8LVkRguguAD7XSCENEm_cO2FYl25iaCGf13iTgw/viewform?usp=publish-editor'
