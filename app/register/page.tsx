@@ -369,7 +369,7 @@ const registrationEvents = [
     mode: "OFFLINE",
     title: "Chaturanga",
     subtitle: "Flagship Event",
-    cost: "₹100 / player",
+    cost: "Free",
     formUrl: "https://forms.cloud.microsoft/r/uqJeAxxJNv?embed=true",
   },
 ];
