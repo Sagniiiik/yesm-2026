@@ -358,7 +358,7 @@ const registrationEvents = [
     rulebookHref: "/rulebook#bid-o-nomics",
     mode: "OFFLINE",
     title: "Bid-o-nomics",
-    subtitle: "The Eco-Nomic Auction",
+    subtitle: "Mock Auction",
     cost: "₹200 / team",
     formUrl:
       "https://docs.google.com/forms/d/e/1FAIpQLSey0VxoU0l8LVkRguguAD7XSCENEm_cO2FYl25iaCGf13iTgw/viewform?usp=publish-editor",
@@ -368,7 +368,7 @@ const registrationEvents = [
     rulebookHref: "/rulebook#chaturanga",
     mode: "OFFLINE",
     title: "Chaturanga",
-    subtitle: "Chess Tournament",
+    subtitle: "Flagship Event",
     cost: "₹100 / player",
     formUrl: "https://forms.cloud.microsoft/r/uqJeAxxJNv?embed=true",
   },
