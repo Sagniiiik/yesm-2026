@@ -279,11 +279,12 @@ export default function Events() {
       formUrl: 'https://forms.gle/xiFF6mHYc4R93SuQ9',
       qr: '/qrs/collo.jpeg'
     },
-    { 
+   { 
       id: 'pawrito', mode: 'ONLINE', title: 'Pa-Writo (Essay Writing)', cost: 'Free', deadline: 'Jan 12, 2027',
       desc: 'Transform your concepts into a persuasive fabric of words.',
       rules: 'Max 1600 words. APA referencing style. Submitted as a PDF (max 5MB). AI usage is strictly prohibited and will lead to disqualification. Individual participation only.',
-      topics: ["Green Transition vs. Growth", "Chips, Critical Minerals and Cloud", "Her Rupee vs His Rupee"]
+      topics: ["Green Transition vs. Growth", "Chips, Critical Minerals and Cloud", "Her Rupee vs His Rupee"],
+      formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfc8_xgJ4Zm7XZzj0XScu7M8YVP3Vt-R9ilQ3eE7CljkOFixg/viewform?usp=preview'
     },
     { 
       id: 'fiscal-pix', mode: 'ONLINE', title: 'Fiscal-Pix (Photography)', cost: 'Free', deadline: 'Jan 23, 2027',
