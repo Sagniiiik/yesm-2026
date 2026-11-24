@@ -1,5 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import Navbar from "../../components/navbar";
+// ... rest of your code stays exactly the same
+"use client";
+// import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import { useEffect } from "react";
 
