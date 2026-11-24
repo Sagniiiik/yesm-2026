@@ -7,7 +7,6 @@ import { useState } from "react";
 export default function Events() {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
 
-  // Added 'id' fields to route specifically to rulebook sections if needed later
   const offlineEvents = [
     { 
       id: 'chaturanga', type: 'OFFLINE', title: 'Chaturanga', stat: '2-3 members', deadline: 'Jan 31, 2027',
@@ -137,7 +136,6 @@ export default function Events() {
             </div>
           </div>
 
-          {/* Offline Events Grid */}
           <div className="mb-20">
             <h2 className="text-2xl font-bold text-[#5B2366] mb-8 flex items-center gap-3">
               <span className="w-10 h-10 rounded-full bg-gradient-to-br from-[#5B2366] to-[#43194B] shadow-md text-white flex items-center justify-center text-lg">📍</span>
@@ -170,7 +168,6 @@ export default function Events() {
             </div>
           </div>
 
-          {/* Online Events Grid */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-[#5B2366] mb-8 flex items-center gap-3">
               <span className="w-10 h-10 rounded-full bg-gradient-to-br from-[#D4C391] to-[#B8A369] shadow-md text-white flex items-center justify-center text-lg">💻</span>
@@ -201,18 +198,15 @@ export default function Events() {
               ))}
             </div>
           </div>
-
         </main>
         <Footer />
       </div>
 
-      {/* POPUP MODAL */}
       {selectedEvent && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedEvent(null)}></div>
           
           <div className="bg-[#F8F5F2] w-full max-w-2xl rounded-2xl shadow-2xl relative z-10 overflow-hidden border-t-8 border-t-[#5B2366] animate-in fade-in zoom-in-95 duration-200">
-            {/* Modal Header */}
             <div className="p-6 md:p-8 border-b border-[#E5DFD3] flex justify-between items-start bg-white">
               <div>
                 <h3 className="text-3xl font-extrabold text-[#5B2366]">{selectedEvent.title}</h3>
@@ -228,7 +222,6 @@ export default function Events() {
               </button>
             </div>
             
-            {/* Modal Body */}
             <div className="p-6 md:p-8 space-y-6 max-h-[50vh] overflow-y-auto">
               <div>
                 <h4 className="text-sm font-bold text-[#D4C391] uppercase tracking-widest mb-2">Description</h4>
@@ -252,10 +245,10 @@ export default function Events() {
               )}
             </div>
 
-            {/* NEW: Two-Button Modal Footer */}
             <div className="p-6 border-t border-[#E5DFD3] bg-white flex flex-col sm:flex-row justify-between gap-4">
+              {/* THIS LINK NOW ROUTES TO THE SPECIFIC EVENT ID ON THE RULEBOOK PAGE */}
               <Link 
-                href="/rulebook" 
+                href={`/rulebook#${selectedEvent.id}`} 
                 className="text-[#5B2366] font-bold py-3 px-6 rounded-full border-2 border-[#5B2366] hover:bg-[#F8F5F2] transition-colors text-center w-full sm:w-auto"
               >
                 Read Full Rules
@@ -270,7 +263,6 @@ export default function Events() {
           </div>
         </div>
       )}
-
     </div>
   );
 }

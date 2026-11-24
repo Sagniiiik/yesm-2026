@@ -1,7 +1,26 @@
+"use client";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
+import { useEffect } from "react";
 
 export default function Rulebook() {
+  
+  // This hook detects the #hash in the URL and auto-opens the targeted accordion
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const targetElement = document.querySelector(hash) as HTMLDetailsElement;
+        if (targetElement) {
+          targetElement.open = true;
+          // Offset scrolling slightly so the header doesn't cover the title
+          const y = targetElement.getBoundingClientRect().top + window.scrollY - 100;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 100); // Slight delay ensures DOM is fully painted before scrolling
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#F8F5F2] text-[#2A2626] flex flex-col font-sans">
       <Navbar />
@@ -23,8 +42,7 @@ export default function Rulebook() {
         </h2>
         
         <div className="space-y-4 mb-20">
-          {/* Pa-Writo */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="pawrito" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Pa-Writo (Essay Writing)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -61,8 +79,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Artflation */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="artflation" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Artflation (Poster Making)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -98,8 +115,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Memesis */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="memesis" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Memesis (Meme Making)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -124,8 +140,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Econmotion */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="econmotion" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Econmotion (Reel Making)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -156,8 +171,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Fiscal-Pix */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="fiscal-pix" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Fiscal-Pix (Photography)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -185,8 +199,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Focalibre */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="focalibre" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Focalibre (Short Film Making)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -226,8 +239,7 @@ export default function Rulebook() {
         
         <div className="space-y-4">
           
-          {/* Colloquium */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="colloquium" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Colloquium (Paper Presentation)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -261,8 +273,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Mock Classroom */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="proffing-it" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Proffing-It (Mock Classroom)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -283,8 +294,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Resolving It */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="resolving-it" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Resolving It (Case Study Analysis)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -306,8 +316,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Pitching It */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="pitching-it" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Pitching It (Shark Tank)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -330,8 +339,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Equizilibrium */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="equizilibrium" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Equizilibrium (Quiz Competition)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -350,8 +358,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Bid-o-nomics */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="bid-o-nomics" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Bid-o-nomics: Trade City (Mock IPL Auction)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -371,8 +378,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Ecogency */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="ecogency" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Ecogency (Oxford Style Debate)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -391,8 +397,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Conferencia */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="conferencia" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Conferencia (Committee Simulation)</span>
               <span className="transition group-open:rotate-180">▼</span>
@@ -411,8 +416,7 @@ export default function Rulebook() {
             </div>
           </details>
 
-          {/* Chaturanga */}
-          <details className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden">
+          <details id="chaturanga" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <span>Chaturanga (Flagship Event)</span>
               <span className="transition group-open:rotate-180">▼</span>
