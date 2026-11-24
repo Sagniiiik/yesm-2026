@@ -9,12 +9,12 @@ export default function Navbar() {
     <nav className="bg-[#F8F5F2] border-b border-[#E5DFD3] py-4 px-6 md:px-12 font-sans relative z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         
-        {/* Added overflow-hidden container to slice off the extra white padding */}
-        <Link href="/" className="flex items-center h-16 md:h-20 w-40 md:w-56 overflow-hidden relative">
+        {/* FIX: Removed overflow and scale. Using larger height and negative margins to eat the whitespace perfectly */}
+        <Link href="/" className="flex items-center -ml-4 md:-ml-6">
           <img 
             src="/logo.png" 
             alt="YESM 2027 Logo" 
-            className="w-full h-full object-contain mix-blend-multiply scale-[1.8] md:scale-[2.2] transform origin-left absolute top-1/2 left-0 -translate-y-1/2" 
+            className="h-20 md:h-28 w-auto object-contain mix-blend-multiply" 
           />
         </Link>
         
