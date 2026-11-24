@@ -91,7 +91,8 @@ export default function Rulebook() {
                 <li>The size of the .pdf file should not exceed 5MB.</li>
               </ol>
 
-              <p><strong>Contact :-</strong> Sreejoyee Banerjee</p>
+              <p><strong>Contact:</strong><br />
+              Sreejoyee Banerjee +91 98367 24650</p>
             </div>
           </details>
 
@@ -135,7 +136,9 @@ export default function Rulebook() {
               The final poster has to be mailed at artflation2027@gmail.com within 25th January.<br />
               The email subject line and file name must strictly follow the format: artflation_NameOfParticipant_Name of the institution</p>
 
-              <p><strong>Contact :-</strong> Kaninika Roy, Souvik Roy</p>
+              <p><strong>Contact:</strong><br />
+              Kaninika Roy +91 79801 77052<br />
+              Souvik Roy +91 81589 57529</p>
             </div>
           </details>
 
@@ -165,7 +168,8 @@ export default function Rulebook() {
               <strong>JUDGING & RESULTS:</strong> Entries will be evaluated on creativity, originality, humour, theme relevance and presentation. The 1st, 2nd and 3rd prize winners will be announced through the official WhatsApp group.<br />
               <strong>COPYRIGHT & FINAL DECISION:</strong> The organisers reserve the right to use submitted memes for fest-related promotional purposes, with due credit to the creators. The decision of the judges and organising committee will be final.</p>
 
-              <p><strong>Contact :-</strong> Sneha Chatterjee</p>
+              <p><strong>Contact:</strong><br />
+              Sneha Chatterjee +91 90734 91245</p>
             </div>
           </details>
 
@@ -212,7 +216,8 @@ export default function Rulebook() {
               3.Judging Criteria :Entries will be judged on creativity,adherence to theme,technical skill and overall impact.<br />
               4.Evaluation Criteria: Submissions on other economics-related topics are welcome; however, submissions aligned with the listed themes will be accorded higher priority.</p>
 
-              <p><strong>Contact</strong><br />Sashwati Saha<br />Phone:+918100533947<br />Email:sashsaha21@gmail.com</p>
+              <p><strong>Contact:</strong><br />
+              Sashwati Saha +91 81005 33947<br />Email: sashsaha21@gmail.com</p>
             </div>
           </details>
 
@@ -251,7 +256,8 @@ export default function Rulebook() {
               - JUDGING CRITERIA: CREATIVITY, ADHERENCE TO THE THEME, TECHNICAL SKILL, AND OVERALL IMPACT.<br />
               - USAGE RIGHTS: PARTICIPANTS GRANT ORGANIZERS PERMISSION TO USE WORK FOR PROMOTIONAL PURPOSES (WITH CREDIT).</p>
 
-              <p><strong>Contact:-</strong> Shawnee Dutta</p>
+              <p><strong>Contact:</strong><br />
+              Shawanee Dutta +91 94744 43938</p>
             </div>
           </details>
 
@@ -291,7 +297,8 @@ export default function Rulebook() {
               8 .CAPTION: INCLUDE A SHORT DESCRIPTION EXPLAINING THE core concept of the film and it's connection to the given topic.<br />
               8.JUDGING CRITERIA: CREATIVITY, ADHERENCE TO THE THEME, TECHNICAL SKILL, AND OVERALL IMPACT.</p>
 
-              <p><strong>Contact:</strong> Hrishav Chakraborty</p>
+              <p><strong>Contact:</strong><br />
+              Hrishav Chakraborty +91 93302 91758</p>
             </div>
           </details>
 
