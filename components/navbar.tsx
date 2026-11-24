@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="bg-[#F8F5F2] border-b border-[#E5DFD3] py-4 px-6 md:px-12 font-sans relative z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         
-        {/* FIX: Removed overflow and scale. Using larger height and negative margins to eat the whitespace perfectly */}
+        {/* Logo with negative margins to handle whitespace */}
         <Link href="/" className="flex items-center -ml-4 md:-ml-6">
           <img 
             src="/logo.png" 
@@ -19,17 +19,18 @@ export default function Navbar() {
         </Link>
         
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-10">
-          <div className="flex gap-8 text-sm md:text-base font-extrabold uppercase tracking-widest text-[#4A4545]">
+        <div className="hidden md:flex items-center gap-6 lg:gap-10">
+          <div className="flex gap-6 lg:gap-8 text-sm md:text-base font-extrabold uppercase tracking-widest text-[#4A4545]">
             <Link href="/" className="hover:text-[#5B2366] hover:scale-105 transition-all duration-200">Home</Link>
             <Link href="/about" className="hover:text-[#5B2366] hover:scale-105 transition-all duration-200">About</Link>
             <Link href="/events" className="hover:text-[#5B2366] hover:scale-105 transition-all duration-200">Events</Link>
+            {/* New Rulebook Link */}
+            <Link href="/rulebook" className="text-[#5B2366] hover:text-[#7A5F1C] hover:scale-105 transition-all duration-200">Rulebook</Link>
           </div>
           
-          {/* Call to Action Button */}
           <Link 
             href="/register" 
-            className="bg-[#5B2366] text-white text-sm md:text-base font-bold py-3 px-8 rounded-full hover:bg-[#43194B] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+            className="bg-[#5B2366] text-white text-sm md:text-base font-bold py-3 px-8 rounded-full hover:bg-[#43194B] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
           >
             Register Now
           </Link>
@@ -57,6 +58,7 @@ export default function Navbar() {
         <Link href="/" onClick={() => setIsOpen(false)} className="text-xl font-extrabold uppercase tracking-widest text-[#4A4545] hover:text-[#5B2366]">Home</Link>
         <Link href="/about" onClick={() => setIsOpen(false)} className="text-xl font-extrabold uppercase tracking-widest text-[#4A4545] hover:text-[#5B2366]">About</Link>
         <Link href="/events" onClick={() => setIsOpen(false)} className="text-xl font-extrabold uppercase tracking-widest text-[#4A4545] hover:text-[#5B2366]">Events</Link>
+        <Link href="/rulebook" onClick={() => setIsOpen(false)} className="text-xl font-extrabold uppercase tracking-widest text-[#5B2366] hover:text-[#7A5F1C]">Rulebook</Link>
         
         <Link 
           href="/register" 
