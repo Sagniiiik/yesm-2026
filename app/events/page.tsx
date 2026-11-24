@@ -7,51 +7,51 @@ import { useState } from "react";
 export default function Events() {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
 
-  // Consolidated Event Data
+  // Added 'id' fields to route specifically to rulebook sections if needed later
   const offlineEvents = [
     { 
-      type: 'OFFLINE', title: 'Chaturanga', stat: '2-3 members', deadline: 'Jan 31, 2027',
+      id: 'chaturanga', type: 'OFFLINE', title: 'Chaturanga', stat: '2-3 members', deadline: 'Jan 31, 2027',
       desc: 'The Flagship Event. Untangle intricate logic-driven puzzles and activities in the ultimate showdown.', 
       rules: 'A logic-driven challenge where every decision counts. Usage of mobile phones is strictly prohibited. No prior preparation required.'
     },
     { 
-      type: 'HYBRID', title: 'Colloquium', stat: 'Max 3 members', deadline: 'Dec 28, 2026',
+      id: 'colloquium', type: 'HYBRID', title: 'Colloquium', stat: 'Max 3 members', deadline: 'Dec 28, 2026',
       desc: 'Paper Presentation. Showcase original research, challenge conventional thinking, and spark debate.', 
       rules: '1000-word abstract for prelims. Final paper max 5000 words. Max 25 presentation slides. 10 mins to present + 2 min Q&A.',
       topics: ["Economic Nationalism", "India's AI Dilemma", "India's Passport to Gender Equality (Gig Economy)"]
     },
     { 
-      type: 'OFFLINE', title: 'Pitching It', stat: 'Max 3 members', deadline: 'Jan 25, 2027',
+      id: 'pitching-it', type: 'OFFLINE', title: 'Pitching It', stat: 'Max 3 members', deadline: 'Jan 25, 2027',
       desc: 'Shark Tank simulation. Pitch your groundbreaking startup idea or product to a panel of investors.', 
       rules: 'Submit pitch deck (max 10 slides). Final offline pitch is 5+1 minutes followed by a 3 min Q&A. Exceeding time limits results in negative marking.'
     },
     { 
-      type: 'OFFLINE', title: 'Bid-o-nomics: Trade City', stat: '₹200 / team', deadline: 'Jan 31, 2027',
+      id: 'bid-o-nomics', type: 'OFFLINE', title: 'Bid-o-nomics: Trade City', stat: '₹200 / team', deadline: 'Jan 31, 2027',
       desc: 'Mock IPL Auction. Build your dream squad with an ₹80 crore purse. Brains, bids, and bold moves.', 
       rules: 'Written cricket quiz prelims. Auction purse of ₹80 crore. Squads must maintain minimums: 3 batsmen, 3 bowlers, 3 all-rounders, 1 wicketkeeper. Max 4 overseas players in Playing XI.'
     },
     { 
-      type: 'OFFLINE', title: 'Conferencia', stat: 'Single/Double Del.', deadline: 'Jan 31, 2027',
+      id: 'conferencia', type: 'OFFLINE', title: 'Conferencia', stat: 'Single/Double Del.', deadline: 'Jan 31, 2027',
       desc: 'Committee Simulation (WTO). Sharp research, persuasive diplomacy, and powerful speaking.', 
       rules: 'World Trade Organization committee simulation. English is the official language. Formal wear for Day 1, Ethnic wear for Day 2. Fees: ₹650 Single / ₹1200 Double.'
     },
     { 
-      type: 'OFFLINE', title: 'Ecogency', stat: '₹150 / person', deadline: 'Jan 31, 2027',
+      id: 'ecogency', type: 'OFFLINE', title: 'Ecogency', stat: '₹150 / person', deadline: 'Jan 31, 2027',
       desc: 'Oxford Style Debate. Words are weapons and logic is your armor. No middle ground allowed.', 
       rules: 'Teams of 2 (one speaking for, one against). Individual registrants will be randomly paired. Language chosen (Bengali, Hindi, or English) cannot be changed mid-speech.'
     },
     { 
-      type: 'OFFLINE', title: 'Equizilibrium', stat: '₹150 / team', deadline: 'Jan 31, 2027',
+      id: 'equizilibrium', type: 'OFFLINE', title: 'Equizilibrium', stat: '₹150 / team', deadline: 'Jan 31, 2027',
       desc: 'U-25 General Quiz. A delightful interplay of wisdom, trivia, and analytical thinking.', 
       rules: 'U-25 General Quiz. Max 3 members per team (Lone wolves permitted). Prelims will be a written test. Top 6 teams qualify for the final pounce-bounce format stage.'
     },
     { 
-      type: 'OFFLINE', title: 'Resolving It', stat: '2-4 members', deadline: 'Jan 23, 2027',
+      id: 'resolving-it', type: 'OFFLINE', title: 'Resolving It', stat: '2-4 members', deadline: 'Jan 23, 2027',
       desc: 'Case Study Analysis. Identify underlying challenges and develop structured, effective solutions.', 
       rules: 'Teams of 2-4 members. Max 4 slides in PPT/PDF format. Top 8 teams qualify for offline finals featuring a 10 min presentation and 3 min Q&A.'
     },
     { 
-      type: 'HYBRID', title: 'Proffing-It', stat: 'UG Economics', deadline: 'Jan 31, 2027',
+      id: 'proffing-it', type: 'HYBRID', title: 'Proffing-It', stat: 'UG Economics', deadline: 'Jan 31, 2027',
       desc: 'Mock Classroom. Move to the other side of the table and deliver a compelling academic lecture.', 
       rules: 'Open exclusively to enrolled UG Economics students. Individual participation. Prelims (Online): 6 min lecture + 4 min Q&A. Finals (Offline): 10 min lecture + 5 min Q&A. Topics mailed 36-48 hrs prior.'
     },
@@ -59,37 +59,37 @@ export default function Events() {
 
   const onlineEvents = [
     { 
-      title: 'Pa-Writo', date: 'Jan 12, 2027',
+      id: 'pawrito', title: 'Pa-Writo', date: 'Jan 12, 2027',
       desc: 'Essay Writing. Transform your concepts into a persuasive fabric of words.',
       rules: 'Max 1600 words. APA referencing style. Submitted as a PDF (max 5MB). AI usage is strictly prohibited and will lead to disqualification. Individual participation only.',
       topics: ["Green Transition vs. Growth", "Chips, Critical Minerals and Cloud", "Her Rupee vs His Rupee"]
     },
     { 
-      title: 'Artflation', date: 'Jan 23, 2027',
+      id: 'artflation', title: 'Artflation', date: 'Jan 23, 2027',
       desc: 'Poster Making. Turn a complex idea into a single visual that stops everyone in their tracks.',
       rules: 'Digital format (JPEG, PNG, PDF) at 300 DPI. Dimensions must be A3, A4, or 16:9. No AI generation, templates, or watermarks. Must include a 50-100 word description of the concept.',
       topics: ["Redefining Humanity in the Age of AI", "The Unfinished Generation"]
     },
     { 
-      title: 'Memesis', date: 'Jan 25, 2027',
+      id: 'memesis', title: 'Memesis', date: 'Jan 25, 2027',
       desc: 'Meme Making. Where humour meets sharp thinking. Just one perfect image and a punchline.',
       rules: 'Max 2 original memes per participant. Existing templates permitted with original captions. No AI tools allowed. Submitted via Google Form.',
       topics: ["The Last Minute Economy", "The Placement Paradox", "Attendance vs Academic Survival", "The Election Economy", "Dilemma of Exams"]
     },
     { 
-      title: 'Econmotion', date: 'Jan 23, 2027',
+      id: 'econmotion', title: 'Econmotion', date: 'Jan 23, 2027',
       desc: 'Reel Making. Turn an everyday moment into a viral-worthy reel that demands a replay.',
       rules: '30-120 seconds duration. Vertical 9:16 format (MP4, 1080p). Up to 3 members per team. AI is strictly prohibited. Must include a 50-100 word description.',
       topics: ["FOMO as a Market Driver", "Same Salaries/Different Lives", "A Generation on Rent", "Illusion of Free"]
     },
     { 
-      title: 'Fiscal-Pix', date: 'Jan 23, 2027',
+      id: 'fiscal-pix', title: 'Fiscal-Pix', date: 'Jan 23, 2027',
       desc: 'Photography. Capture life, economics, and society through the lens of your camera.',
       rules: 'High-res JPEG/JPG format. EXIF data is mandatory. Minor edits only (brightness/contrast); no heavy manipulation or AI. Must include a short caption explaining context.',
       topics: ["Two Indias - One Future", "The Unequal Journey (Growth and Its Gaps)"]
     },
     { 
-      title: 'Focalibre', date: 'Jan 23, 2027',
+      id: 'focalibre', title: 'Focalibre', date: 'Jan 23, 2027',
       desc: 'Short Film Making. Tell a powerful story that makes people laugh, think, or feel something real.',
       rules: '3 to 5 minutes duration. Horizontal 1920x1080 MP4 format. Subtitles are mandatory regardless of language. Submitted via Drive link.'
     },
@@ -131,7 +131,7 @@ export default function Events() {
                   Navigating Geopolitical Transitions, Emerging Technologies, and the New Trade Order. India's development journey is being shaped by a rapidly changing world.
                 </p>
                 <p className="text-[#4A4545] text-base leading-relaxed font-medium">
-                  Click on any event below to view its specific guidelines, topics, and deadlines.
+                  Click on any event below for an overview, or read the full Rulebook for submission details.
                 </p>
               </div>
             </div>
@@ -202,16 +202,6 @@ export default function Events() {
             </div>
           </div>
 
-          <div className="text-center mt-16">
-            <Link 
-              href="/register" 
-              className="group relative inline-flex items-center justify-center bg-[#5B2366] text-white text-lg font-bold py-4 px-12 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-              <span className="relative">Register for Events</span>
-            </Link>
-          </div>
-
         </main>
         <Footer />
       </div>
@@ -239,14 +229,14 @@ export default function Events() {
             </div>
             
             {/* Modal Body */}
-            <div className="p-6 md:p-8 space-y-6 max-h-[60vh] overflow-y-auto">
+            <div className="p-6 md:p-8 space-y-6 max-h-[50vh] overflow-y-auto">
               <div>
                 <h4 className="text-sm font-bold text-[#D4C391] uppercase tracking-widest mb-2">Description</h4>
                 <p className="text-[#4A4545] leading-relaxed">{selectedEvent.desc}</p>
               </div>
               
               <div>
-                <h4 className="text-sm font-bold text-[#D4C391] uppercase tracking-widest mb-2">Rules & Guidelines</h4>
+                <h4 className="text-sm font-bold text-[#D4C391] uppercase tracking-widest mb-2">Basic Rules</h4>
                 <p className="text-[#4A4545] leading-relaxed bg-white p-4 rounded-lg border border-[#E5DFD3]">{selectedEvent.rules}</p>
               </div>
 
@@ -262,11 +252,17 @@ export default function Events() {
               )}
             </div>
 
-            {/* Modal Footer */}
-            <div className="p-6 border-t border-[#E5DFD3] bg-white flex justify-end">
+            {/* NEW: Two-Button Modal Footer */}
+            <div className="p-6 border-t border-[#E5DFD3] bg-white flex flex-col sm:flex-row justify-between gap-4">
+              <Link 
+                href="/rulebook" 
+                className="text-[#5B2366] font-bold py-3 px-6 rounded-full border-2 border-[#5B2366] hover:bg-[#F8F5F2] transition-colors text-center w-full sm:w-auto"
+              >
+                Read Full Rules
+              </Link>
               <Link 
                 href="/register" 
-                className="bg-[#5B2366] text-white font-bold py-3 px-8 rounded-full hover:bg-[#43194B] transition-colors shadow-md"
+                className="bg-[#5B2366] text-white font-bold py-3 px-8 rounded-full hover:bg-[#43194B] shadow-md transition-colors text-center w-full sm:w-auto"
               >
                 Register Now
               </Link>
