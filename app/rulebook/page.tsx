@@ -316,7 +316,7 @@ export default function Rulebook() {
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <div className="flex items-center gap-4 flex-wrap">
                 <span>Colloquium ( Paper Presentation)</span>
-                <span className="bg-[#D4C391] text-[#5B2366] text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">₹100 / team</span>
+                <span className="bg-[#D4C391] text-[#5B2366] text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Fees Apply</span>
               </div>
               <span className="transition group-open:rotate-180">▼</span>
             </summary>

@@ -272,7 +272,7 @@ export default function Events() {
 
   const allEvents = [
     { 
-      id: 'colloquium', mode: 'HYBRID', title: 'Colloquium (Paper Presentation)', cost: '₹100 / team', deadline: 'Dec 28, 2026',
+      id: 'colloquium', mode: 'HYBRID', title: 'Colloquium (Paper Presentation)', cost: 'Fees Apply', deadline: 'Dec 28, 2026',
       desc: 'Showcase original research, challenge conventional thinking, and spark debate.', 
       rules: '1000-word abstract for prelims. Final paper max 5000 words. Max 25 presentation slides. 10 mins to present + 2 min Q&A.',
       topics: ["Economic Nationalism", "India's AI Dilemma", "India's Passport to Gender Equality (Gig Economy)"],
