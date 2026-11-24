@@ -466,7 +466,7 @@ export default function Rulebook() {
             <div className="p-6 border-t border-[#E5DFD3] text-[#4A4545] space-y-6 text-sm bg-[#F8F5F2]/50">
               <p><strong>Description:</strong> Got a groundbreaking startup idea, a unique product, or a service that can disrupt the market? Whether you are building the next big venture or a sustainable social enterprise, can you pitch your vision with conviction and win over the investors? If so, SHARK TANK is the ultimate platform to showcase your entrepreneurial spirit and business acumen.</p>
 
-              <p><strong>Mode :-</strong> Offline<br />
+              <p><strong>Mode :-</strong> Hybrid<br />
               <strong>Eligibility:-</strong> The event is open to enrolled undergraduate and postgraduate students of any discipline.</p>
 
               <p><strong>ROUND 1 PRELIMS</strong><br />
