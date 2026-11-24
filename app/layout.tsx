@@ -13,10 +13,13 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-// UPDATED METADATA
 export const metadata: Metadata = {
   title: "YESM 2027 | Young Economist Students' Meet",
   description: "The 19th Edition of the premier collegiate economics summit at Jadavpur University.",
+  icons: {
+    // This tells Next.js to use your existing logo as the tab icon
+    icon: '/logo.png', 
+  },
 };
 
 export default function RootLayout({
