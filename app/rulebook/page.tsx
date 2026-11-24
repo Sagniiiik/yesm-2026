@@ -643,7 +643,7 @@ export default function Rulebook() {
           <details id="conferencia" className="group bg-white rounded-xl border border-[#E5DFD3] shadow-sm overflow-hidden scroll-mt-24">
             <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-xl text-[#5B2366] hover:bg-[#F8F5F2] transition-colors">
               <div className="flex items-center gap-4 flex-wrap">
-                <span>Conferencia (Committee stimulation)</span>
+                <span>Conferencia (MUN Committee stimulation)</span>
                 <span className="bg-[#D4C391] text-[#5B2366] text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Fees Apply</span>
               </div>
               <span className="transition group-open:rotate-180">▼</span>
