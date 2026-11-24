@@ -7,7 +7,6 @@ import { useState } from "react";
 export default function Events() {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
 
-  // Unified array in the exact requested order with bracketed titles and cost/deadline footers
   const allEvents = [
     { 
       id: 'colloquium', mode: 'HYBRID', title: 'Colloquium (Paper Presentation)', cost: '₹100 / team', deadline: 'Dec 28, 2026',
@@ -92,6 +91,13 @@ export default function Events() {
     },
   ];
 
+  // Helper function to color-code event tags
+  const getBadgeColor = (mode: string) => {
+    if (mode === 'ONLINE') return 'text-[#C42079]'; // Magenta Pink
+    if (mode === 'HYBRID') return 'text-[#D4C391]'; // Gold
+    return 'text-[#5B2366]'; // Deep Purple
+  };
+
   return (
     <div className="min-h-screen bg-[#F8F5F2] text-[#2A2626] flex flex-col font-sans relative overflow-hidden">
       
@@ -110,16 +116,17 @@ export default function Events() {
               Event Schedule
             </h1>
             <p className="text-lg text-[#4A4545] font-medium max-w-2xl mx-auto mb-6 tracking-wide uppercase">
-              #BeyondTheParadigm <span className="mx-2 text-[#D4C391]">|</span> February 4th - 5th, 2027
+              #BeyondTheParadigm <span className="mx-2 text-[#C42079]">|</span> February 4th - 5th, 2027
             </p>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-[#5B2366] to-[#D4C391] mx-auto rounded-full mb-10"></div>
+            {/* 3-Color Gradient Line */}
+            <div className="w-32 h-1.5 bg-gradient-to-r from-[#5B2366] via-[#C42079] to-[#D4C391] mx-auto rounded-full mb-10"></div>
             
             <div className="relative bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-2xl border border-[#D4C391]/50 shadow-xl max-w-4xl mx-auto text-left overflow-hidden group">
               <div className="absolute -right-20 -top-20 w-72 h-72 bg-[#F2E8CF] rounded-full opacity-60 blur-3xl group-hover:bg-[#E5DFD3] transition-colors duration-700 pointer-events-none"></div>
               
               <div className="relative z-10">
                 <h2 className="text-sm font-bold tracking-widest uppercase text-[#7A5F1C] mb-2 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#D4C391]"></span> YESM 2027 Theme
+                  <span className="w-2 h-2 rounded-full bg-[#C42079]"></span> YESM 2027 Theme
                 </h2>
                 <h3 className="text-2xl md:text-3xl font-extrabold text-[#5B2366] mb-4 leading-snug">
                   Reimagining India's Development Trajectory
@@ -136,7 +143,8 @@ export default function Events() {
 
           <div className="mb-20">
             <h2 className="text-2xl font-bold text-[#5B2366] mb-8 flex items-center gap-3">
-              <span className="w-10 h-10 rounded-full bg-gradient-to-br from-[#5B2366] to-[#43194B] shadow-md text-white flex items-center justify-center text-lg">📅</span>
+              {/* Gradient Icon Badge */}
+              <span className="w-10 h-10 rounded-full bg-gradient-to-br from-[#5B2366] to-[#C42079] shadow-md text-white flex items-center justify-center text-lg">📅</span>
               Complete Event Roster
             </h2>
             
@@ -145,27 +153,38 @@ export default function Events() {
                 <button 
                   key={i} 
                   onClick={() => setSelectedEvent(event)}
-                  className="group bg-white p-6 rounded-xl border border-[#E5DFD3] border-b-4 border-b-[#5B2366] shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden text-left w-full cursor-pointer flex flex-col"
+                  // Added Magenta hover border and subtle pink shadow
+                  className="group bg-white p-6 rounded-xl border border-[#E5DFD3] border-b-4 border-b-[#5B2366] hover:border-b-[#C42079] shadow-sm hover:shadow-xl hover:shadow-[#C42079]/10 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden text-left w-full cursor-pointer flex flex-col"
                 >
                   <div className="absolute inset-0 bg-[linear-gradient(to_right,#F8F5F2_1px,transparent_1px),linear-gradient(to_bottom,#F8F5F2_1px,transparent_1px)] bg-[size:14px_14px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                   
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex justify-between items-start mb-2">
-                      <div className={`text-xs font-bold tracking-wider ${event.mode === 'ONLINE' ? 'text-[#5B2366]' : 'text-[#D4C391]'}`}>{event.mode}</div>
-                      <svg className="w-5 h-5 text-[#5B2366] opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                      <div className={`text-xs font-bold tracking-wider ${getBadgeColor(event.mode)}`}>{event.mode}</div>
+                      <svg className="w-5 h-5 text-[#C42079] opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                     </div>
                     <h3 className="text-xl font-extrabold text-[#5B2366] mb-2">{event.title}</h3>
                     <p className="text-[#7A7575] text-sm mb-6 leading-relaxed flex-1">{event.desc}</p>
                     
-                    {/* Uniform Footer: Deadline on Left, Cost on Right */}
                     <div className="flex justify-between items-center text-xs font-semibold text-[#4A4545] bg-[#F8F5F2] px-3 py-2 rounded-md mt-auto">
                       <span>{event.deadline}</span>
-                      <span className="text-[#5B2366] font-bold">{event.cost}</span>
+                      <span className={`${event.cost === 'Free' ? 'text-[#5B2366]' : 'text-[#C42079]'} font-bold`}>{event.cost}</span>
                     </div>
                   </div>
                 </button>
               ))}
             </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <Link 
+              href="/register" 
+              // Upgraded to a Purple-to-Magenta gradient button
+              className="group relative inline-flex items-center justify-center bg-gradient-to-r from-[#5B2366] to-[#C42079] text-white text-lg font-bold py-4 px-12 rounded-full overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-[#C42079]/30 transition-all duration-300 hover:scale-105"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+              <span className="relative">Register for Events</span>
+            </Link>
           </div>
 
         </main>
@@ -176,7 +195,7 @@ export default function Events() {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedEvent(null)}></div>
           
-          <div className="bg-[#F8F5F2] w-full max-w-2xl rounded-2xl shadow-2xl relative z-10 overflow-hidden border-t-8 border-t-[#5B2366] animate-in fade-in zoom-in-95 duration-200">
+          <div className="bg-[#F8F5F2] w-full max-w-2xl rounded-2xl shadow-2xl relative z-10 overflow-hidden border-t-8 border-t-[#C42079] animate-in fade-in zoom-in-95 duration-200">
             <div className="p-6 md:p-8 border-b border-[#E5DFD3] flex justify-between items-start bg-white">
               <div>
                 <h3 className="text-3xl font-extrabold text-[#5B2366]">{selectedEvent.title}</h3>
@@ -185,14 +204,14 @@ export default function Events() {
                     Deadline: {selectedEvent.deadline}
                   </p>
                   <span className="text-[#E5DFD3]">|</span>
-                  <p className="text-[#5B2366] font-bold text-sm tracking-widest uppercase">
+                  <p className="text-[#C42079] font-bold text-sm tracking-widest uppercase">
                     {selectedEvent.cost}
                   </p>
                 </div>
               </div>
               <button 
                 onClick={() => setSelectedEvent(null)}
-                className="text-[#7A7575] hover:text-[#5B2366] hover:bg-[#E5DFD3] p-2 rounded-full transition-colors"
+                className="text-[#7A7575] hover:text-[#C42079] hover:bg-[#E5DFD3] p-2 rounded-full transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
               </button>
@@ -200,18 +219,18 @@ export default function Events() {
             
             <div className="p-6 md:p-8 space-y-6 max-h-[50vh] overflow-y-auto">
               <div>
-                <h4 className="text-sm font-bold text-[#D4C391] uppercase tracking-widest mb-2">Description</h4>
+                <h4 className="text-sm font-bold text-[#C42079] uppercase tracking-widest mb-2">Description</h4>
                 <p className="text-[#4A4545] leading-relaxed">{selectedEvent.desc}</p>
               </div>
               
               <div>
-                <h4 className="text-sm font-bold text-[#D4C391] uppercase tracking-widest mb-2">Basic Rules</h4>
+                <h4 className="text-sm font-bold text-[#C42079] uppercase tracking-widest mb-2">Basic Rules</h4>
                 <p className="text-[#4A4545] leading-relaxed bg-white p-4 rounded-lg border border-[#E5DFD3]">{selectedEvent.rules}</p>
               </div>
 
               {selectedEvent.topics && (
                 <div>
-                  <h4 className="text-sm font-bold text-[#D4C391] uppercase tracking-widest mb-2">Event Topics / Themes</h4>
+                  <h4 className="text-sm font-bold text-[#C42079] uppercase tracking-widest mb-2">Event Topics / Themes</h4>
                   <ul className="list-disc pl-5 space-y-2 text-[#4A4545] bg-white p-4 rounded-lg border border-[#E5DFD3]">
                     {selectedEvent.topics.map((topic: string, index: number) => (
                       <li key={index} className="leading-snug">{topic}</li>
@@ -224,13 +243,13 @@ export default function Events() {
             <div className="p-6 border-t border-[#E5DFD3] bg-white flex flex-col sm:flex-row justify-between gap-4">
               <Link 
                 href={`/rulebook#${selectedEvent.id}`} 
-                className="text-[#5B2366] font-bold py-3 px-6 rounded-full border-2 border-[#5B2366] hover:bg-[#F8F5F2] transition-colors text-center w-full sm:w-auto"
+                className="text-[#C42079] font-bold py-3 px-6 rounded-full border-2 border-[#C42079] hover:bg-[#F8F5F2] transition-colors text-center w-full sm:w-auto"
               >
                 Read Full Rules
               </Link>
               <Link 
                 href="/register" 
-                className="bg-[#5B2366] text-white font-bold py-3 px-8 rounded-full hover:bg-[#43194B] shadow-md transition-colors text-center w-full sm:w-auto"
+                className="bg-gradient-to-r from-[#5B2366] to-[#C42079] text-white font-bold py-3 px-8 rounded-full hover:shadow-lg transition-colors text-center w-full sm:w-auto"
               >
                 Register Now
               </Link>
