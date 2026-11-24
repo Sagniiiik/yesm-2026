@@ -363,9 +363,9 @@ export default function Events() {
       formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSey0VxoU0l8LVkRguguAD7XSCENEm_cO2FYl25iaCGf13iTgw/viewform?usp=publish-editor'
     },
    { 
-      id: 'chaturanga', mode: 'OFFLINE', title: 'Chaturanga (Chess Tournament)', cost: '₹100 / player', deadline: 'Jan 31, 2027',
-      desc: 'Outthink, outmaneuver, and checkmate your way to victory on the 64 squares.', 
-      rules: 'Individual participation. Rapid format (10+0 or 15+0). Standard FIDE rules apply. Arbiters decision is final.',
+      id: 'chaturanga', mode: 'OFFLINE', title: 'Chaturanga (Flagship Event)', cost: 'Free', deadline: 'Jan 31, 2027',
+      desc: 'Untangle intricate logic-driven puzzles and strategic activities in a two-day showdown.', 
+      rules: 'Open to +2, UG, and PG students. Teams of 2–3 members (cross-institution allowed). Two-day offline format: Prelims on Feb 4, 2027; Finals on Feb 5, 2027. Mobile phones strictly prohibited. No prior preparation required.',
       formUrl: 'https://forms.cloud.microsoft/r/uqJeAxxJNv?embed=true'
     },
   ];
