@@ -280,7 +280,7 @@ export default function Events() {
       qr: '/qrs/collo.jpeg'
     },
    { 
-      id: 'pawrito', mode: 'ONLINE', title: 'Pa-Writo (Essay Writing)', cost: 'Free', deadline: 'Jan 12, 2027',
+      id: 'pawrito', mode: 'ONLINE', title: 'Pa-Writo (Essay Writing)', cost: 'Free', deadline: 'Dec 31, 2027',
       desc: 'Transform your concepts into a persuasive fabric of words.',
       rules: 'Max 1600 words. APA referencing style. Submitted as a PDF (max 5MB). AI usage is strictly prohibited and will lead to disqualification. Individual participation only.',
       topics: ["Green Transition vs. Growth", "Chips, Critical Minerals and Cloud", "Her Rupee vs His Rupee"],

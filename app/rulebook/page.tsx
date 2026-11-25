@@ -62,7 +62,7 @@ export default function Rulebook() {
               <strong>Eligibility:-</strong> The event is open to enrolled high school (+2), undergraduate and postgraduate students of any discipline.</p>
 
               <p><strong>Important dates</strong><br />
-              Registration Deadline:12th January 2027<br />
+              Registration Deadline:31st December 2026<br />
               Submission Deadline:15th January 2027</p>
 
               <p><strong>RULES AND REGULATIONS:</strong></p>
