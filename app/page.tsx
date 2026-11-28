@@ -190,7 +190,7 @@ export default function Home() {
                 <p className="text-xs md:text-sm font-bold tracking-widest text-[#7A5F1C] uppercase">Days</p>
               </div>
               <div>
-                <h4 className="text-3xl md:text-4xl font-extrabold text-[#5B2366] mb-1">12</h4>
+                <h4 className="text-3xl md:text-4xl font-extrabold text-[#5B2366] mb-1">15</h4>
                 <p className="text-xs md:text-sm font-bold tracking-widest text-[#7A5F1C] uppercase">Events</p>
               </div>
               <div>
